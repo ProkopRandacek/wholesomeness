@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 ./generate_images.py $1
-ffmpeg -framerate 2 -i output%02d.png cute.gif
+ffmpeg -framerate 2 -i output%02d.png -vf scale=320:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 10 -loop 0 - gif:- | convert -layers Optimize - cute.gif
 rm output*.png
