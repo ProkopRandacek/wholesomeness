@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+./generate_images.py $1
+ffmpeg -framerate 2 -i output%02d.png cute.gif
+rm output*.png
