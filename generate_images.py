@@ -25,7 +25,14 @@ if len(text) % 2 == 1:
     text.append(text[-1])
 
 # Calculate text position (to be centered)
-textWidth = font.getsize(text[-1], None, None, None, 0)[0]
+while True:
+    textWidth = font.getsize(text[-1], None, None, None, 0)[0]
+    if textWidth > width:
+        fontSize -= 1
+        font = ImageFont.truetype("./inconsolata.ttf", fontSize)
+    else:
+        break
+
 pos = ((width - textWidth) / 2, height - 50)
 
 
