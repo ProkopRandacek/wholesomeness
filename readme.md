@@ -1,5 +1,7 @@
 # wholesome gif generator
 
+!](/demo.gif)
+
 ### Usage:
 1. `git clone git@github.com:ProkopRandacek/wholesomeness.git`
 2. `cd whilesomeness`
